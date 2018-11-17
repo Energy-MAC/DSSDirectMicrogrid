@@ -1,5 +1,5 @@
 [GENERAL]
-DATE=July 16, 2018 at 17:47:41
+DATE=September 18, 2018 at 09:13:34
 CYME_VERSION=7.00
 CYMDIST_REVISION=06
 
@@ -51,7 +51,6 @@ FORMAT_LOADEQUIVALENT=NodeID,LoadModelName,Format,Value1A,Value1B,Value1C,Value2
 [OVERHEADLINE SETTING]
 FORMAT_OVERHEADLINESETTING=SectionID,DeviceNumber,LineCableID,Length,ConnectionStatus,CoordX,CoordY,HarmonicModel,FlowConstraintActive,FlowConstraintUnit,MaximumFlow,SeriesCompensationActive,MaxReactanceMultiplier,SeriesCompensationCost
 BNA1_261,BNA1_261,2035,237.555908,0,,,2,,,,,,
-BNA1_260,BNA1_260,2035,237.555908,0,,,2,,,,,,
 BNA1_244,BNA1_244,2035,46.818450,0,,,2,,,,,,
 BNA1_256,BNA1_256,2035,20.084313,0,,,2,,,,,,
 BNA1_262,BNA1_262,2035,54.674809,0,,,2,,,,,,
@@ -79,7 +78,7 @@ BNA1_271,271,4035,39.357530,0,,,2,,,
 
 [UNDERGROUNDLINE SETTING]
 FORMAT_UNDERGROUNDLINESETTING=SectionID,DeviceNumber,LineCableID,Length,NumberOfCableInParallel,Amps,Amps_1,Amps_2,Amps_3,Amps_4,ConnectionStatus,CoordX,CoordY,HarmonicModel,FlowConstraintActive,FlowConstraintUnit,MaximumFlow
-
+BNA1_260,BNA1_260,5050,97.281388,1,0.000000,0.000000,0.000000,0.000000,0.000000,0,,,2,,,
 
 [SECTION]
 FORMAT_SECTION=SectionID,FromNodeID,FromNodeIndex,ToNodeID,ToNodeIndex,Phase,ZoneID,SubNetworkId,EnvironmentID

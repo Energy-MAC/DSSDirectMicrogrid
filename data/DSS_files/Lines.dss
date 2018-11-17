@@ -1,7 +1,5 @@
 New Line.bna1_261 Units=km Length=0.23755590799999998 bus1=260.1.2.3 bus2=261.1.2.3 switch=n enabled=y phases=3 Linecode=3P_OH_Code0
 
-New Line.bna1_260 Units=km Length=0.23755590799999998 bus1=259.1.2.3 bus2=260.1.2.3 switch=n enabled=y phases=3 Linecode=3P_OH_Code0
-
 New Line.bna1_244 Units=km Length=0.04681845 bus1=240_HEAD.1.2.3 bus2=BNA1_244.1.2.3 switch=n enabled=y phases=3 Linecode=3P_OH_Code0
 
 New Line.bna1_256 Units=km Length=0.020084313000000003 bus1=BNA1_252.1.2.3 bus2=BNA1_256.1.2.3 switch=n enabled=y phases=3 Linecode=3P_OH_Code0
@@ -43,4 +41,6 @@ New Line.bna1_263 Units=km Length=0.289585608 bus1=261.2 bus2=263.2 switch=n ena
 New Line.bna1_270 Units=km Length=0.297631693 bus1=BNA1_269.2 bus2=BNA1_270.2 switch=n enabled=y phases=1 Linecode=1P_OH_Code1
 
 New Line.bna1_271 Units=km Length=0.039357529999999995 bus1=BNA1_268.2 bus2=BNA1_271.2 switch=n enabled=y phases=1 Linecode=1P_OH_Code1
+
+New Line.bna1_260 Units=km Length=0.09728138800000001 bus1=259.1.2.3 bus2=260.1.2.3 switch=n enabled=y phases=3 Linecode=3P_UG_Code2
 
