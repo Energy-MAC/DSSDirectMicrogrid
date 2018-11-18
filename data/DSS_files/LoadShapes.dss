@@ -1,0 +1,2 @@
+
+new loadshape.load interval=1 Npts=24 mult=(File='load_shape.csv')
