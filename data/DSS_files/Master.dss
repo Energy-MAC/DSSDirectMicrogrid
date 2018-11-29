@@ -1,6 +1,6 @@
 Clear
 
-New Circuit.Diesel bus1=240_HEAD pu=1.0 basekV=24.0 R1=0.1 X1=0.6
+New Circuit.BN bus1=240_HEAD pu=1.0 basekV=24.0 R1=0.1 X1=0.6
 
 Redirect LineCodes.dss
 Redirect Lines.dss
