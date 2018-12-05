@@ -4,7 +4,9 @@ New Circuit.BN bus1=240_HEAD pu=1.0 basekV=24.0 R1=0.1 X1=0.6
 
 Redirect LineCodes.dss
 Redirect Lines.dss
+Redirect LoadShapes.dss
 Redirect Loads.dss
+
 
 Set Voltagebases=[24.0]
 
@@ -12,4 +14,7 @@ Calcvoltagebases
 
 Buscoords Buscoords.dss
 
-Solve
+!uncomment this line only when running with OpenDSS
+!set mode=daily
+!set stepsize=1h
+!Solve

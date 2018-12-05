@@ -1,26 +1,101 @@
-New Load.Load_bna1_255_B bus1=BNA1_253.2 model=1 kW=3.28934 kvar=1.544284 Phases=1
+!Costumer's loads
+!Loads for PD 26211
+New Load.Load_bna1_251_A bus1=BNA1_250.1 model=1 kW=47.29 kvar=22.9 Phases=1 kv=13.27
 
-New Load.Load_bna1_256_A_B_C bus1=BNA1_252.1.2.3 model=1 kW=45.89999999999999 kvar=28.4462651327024 Phases=3
+New Load.Load_bna1_251_B bus1=BNA1_250.2 model=1 kW=11.20 kvar=5.42 Phases=1 Conn=Wye kv=13.27
 
-New Load.Load_bna1_262_A_B_C bus1=261.1.2.3 model=1 kW=24.670050000000003 kvar=11.582133 Phases=3
+New Load.Load_bna1_251_C bus1=BNA1_250.3 model=1 kW=9.96 kvar=4.82 Phases=1 Conn=Wye kv=13.27
 
-New Load.Load_bna1_258_A_B_C bus1=BNA1_254.1.2.3 model=1 kW=62.16852900000001 kvar=29.186976 Phases=3
+New Load.Load_bna1_251_A_B_C bus1=BNA1_250.1.2.3 model=1 kW=4.98 kvar=2.41 Phases=3 kv = 24
 
-New Load.Load_bna1_257_A bus1=BNA1_250.1 model=1 kW=11.5 kvar=4.898979485566356 Phases=1
+New Load.Load_bna1_251_AP bus1=BNA1_250.2 model=1 kW=2.85 kvar=0.0 Phases=1 Conn=Wye kv=13.27
 
-New Load.Load_bna1_263_B bus1=261.2 model=1 kW=8.22335 kvar=3.860711 Phases=1
+!Loads for PDs 87204 60083 84862
 
-New Load.Load_bna1_251_A_B_C bus1=BNA1_250.1.2.3 model=1 kW=62.16852900000001 kvar=29.186976 Phases=3
+New Load.Load_bna1_253_A bus1=BNA1_252.1 model=1 kW=18.67 kvar=9.040 Phases=1 kv=13.27
 
-New Load.Load_bna1_247_A_B_C bus1=BNA1_246.1.2.3 model=1 kW=62.16852900000001 kvar=29.186976 Phases=3
+New Load.Load_bna1_253_B bus1=BNA1_252.2 model=1 kW=24.89 kvar=12.054 Phases=1 kv=13.27
 
-New Load.Load_bna1_270_B bus1=BNA1_269.2 model=1 kW=8.22335009740796 kvar=3.8607110073193143 Phases=1
+New Load.Load_bna1_253_C bus1=BNA1_252.3 model=1 kW=7.47 kvar=3.61 Phases=1 kv=13.27
 
-New Load.Load_bna1_253_A_B_C bus1=BNA1_252.1.2.3 model=1 kW=74.01015299999999 kvar=34.746399 Phases=3
+New Load.Load_bna1_253_A_B_C bus1=BNA1_252.1.2.3 model=1 kW=8.71 kvar=4.21 Phases=3 kv = 24
 
-New Load.Load_bna1_271_B bus1=BNA1_268.2 model=1 kW=8.22335009740796 kvar=3.8607110073193143 Phases=1
+New Load.Load_bna1_253_AP bus1=BNA1_252.2 model=1 kW=1.95 kvar=0.0 Phases=1 kv=13.27
 
-New Load.Load_bna1_267_A_B bus1=BNA1_247.1.2 model=1 kW=8.22335 kvar=3.860711 Phases=2
+!Loads for PD 4874
 
-New Load.Load_bna1_269_A_B_C bus1=BNA1_268.1.2.3 model=1 kW=62.16852900000001 kvar=29.186976 Phases=3
+New Load.Load_bna1_258_A bus1=BNA1_254.1 model=1 kW=23.64 kvar=11.45 Phases=1 kv=13.27
+
+New Load.Load_bna1_258_B bus1=BNA1_254.2 model=1 kW=29.87 kvar=14.465 Phases=1 kv=13.27
+
+New Load.Load_bna1_258_C bus1=BNA1_254.3 model=1 kW=16.18 kvar=7.83 Phases=1 kv=13.27
+
+New Load.Load_bna1_258_A_B_C bus1=BNA1_254.1.2.3 model=1 kW=4.98 kvar=2.41 Phases=3 kv = 24
+
+New Load.Load_bna1_258_AP bus1=BNA1_254.2 model=1 kW=0.45 kvar=0.0 Phases=1 kv=13.27
+
+!Loads for PDs 64808 64811 66221
+
+New Load.Load_bna1_262_A bus1=261.1 model=1 kW=8.71 kvar=4.22 Phases=1 kv=13.27
+
+New Load.Load_bna1_262_B bus1=261.2 model=1 kW=17.42 kvar=8.44 Phases=1 kv=13.27
+
+New Load.Load_bna1_262_C bus1=261.3 model=1 kW=8.71 kvar=4.22 Phases=1 kv=13.27
+
+New Load.Load_bna1_262_A_B_C bus1=261.1.2.3 model=1 kW=0 kvar=0 Phases=3 kv=13.27
+
+New Load.Load_bna1_262_AP bus1=261.2 model=1 kW=1.2 kvar=0.0 Phases=1 kv=13.27
+
+!Loads for PD 19753
+
+New Load.Load_bna1_247_A bus1=BNA1_246.1 model=1 kW=19.91 kvar=9.64 Phases=1 kv=13.27 
+
+New Load.Load_bna1_247_B bus1=BNA1_246.2 model=1 kW=6.22 kvar=3.013 Phases=1 kv=13.27
+
+New Load.Load_bna1_247_C bus1=BNA1_246.3 model=1 kW=6.22 kvar=3.013 Phases=1 kv=13.27 
+
+New Load.Load_bna1_247_A_B_C bus1=BNA1_246.1.2.3 model=1 kW=1.24 kvar=0.60 Phases=3 kv = 24
+
+New Load.Load_bna1_247_AP bus1=BNA1_246.2 model=1 kW=0.9 kvar=0.0 Phases=1 kv=13.27
+
+!Loads for PD 64837
+
+New Load.Load_bna1_267_B bus1=BNA1_247.2 model=1 kW=14.93 kvar=7.23 Phases=1 kv=13.27
+
+New Load.Load_bna1_267_AP bus1=BNA1_247.2 model=1 kW=0.3 kvar=0.0 Phases=1 kv=13.27
+
+New Load.Load_bna1_267_A_B_C bus1=BNA1_247.1.2.3 model=1 kW=0 kvar=0 Phases=3 kv=24
+
+!Loads for PD 23249
+
+New Load.Load_bna1_269_A bus1=BNA1_268.1 model=1 kW=64.71 kvar=9.64 Phases=1 kv=13.27
+
+New Load.Load_bna1_269_B bus1=BNA1_268.2 model=1 kW=54.76 kvar=3.013 Phases=1 kv=13.27
+
+New Load.Load_bna1_269_C bus1=BNA1_268.3 model=1 kW=72.18 kvar=3.013 Phases=1 kv=13.27
+
+New Load.Load_bna1_269_A_B_C bus1=BNA1_268.1.2.3 model=1 kW=0 kvar=0 Phases=3 kv=24
+
+New Load.Load_bna1_269_AP bus1=BNA1_268.2 model=1 kW=1.5 kvar=0.0 Phases=1 kv=13.27
+
+!Other Loads
+
+New Load.Load_bna1_263_B bus1=261.2 model=1 kW=8.22335 kvar=3.860711 Phases=1 kv=13.27 daily=fixed
+
+New Load.Load_bna1_257_A bus1=BNA1_250.1 model=1 kW=11.5 kvar=4.898979485566356 Phases=1 kv=13.27 daily=fixed
+
+New Load.Load_bna1_271_B bus1=BNA1_268.2 model=1 kW=8.22335009740796 kvar=3.8607110073193143 Phases=1 kv=13.27 daily=fixed
+
+New Load.Load_bna1_256_A_B_C bus1=BNA1_252.1.2.3 model=1 kW=45.89999999999999 kvar=28.4462651327024 Phases=3 kv = 24 daily=fixed
+
+New Load.Load_bna1_270_B bus1=BNA1_269.2 model=1 kW=8.22335009740796 kvar=3.8607110073193143 Phases=1 kv=13.27 daily=fixed
+
+New Load.Load_bna1_255_B bus1=BNA1_253.2 model=1 kW=3.28934 kvar=1.544284 Phases=1 kv=13.27 daily=fixed
+
+
+
+
+
+
+
 
