@@ -30,21 +30,12 @@ def DSSrunsnap(dss, show = False):
 
     return dss
 
-def DSSrunts_yearly(dss):
-    dss.run_command('set mode=yearly')
+def DSSrunts(dss, run_type):
+    dss.run_command('set mode={0}'.format(run_type))
     dss.run_command('set stepsize=1h')
     dss.run_command('Solve')
     
     return dss
-
-def DSSrunts_daily(dss):
-    dss.run_command('set mode=daily')
-    dss.run_command('set stepsize=1h')
-    dss.run_command('Solve')
-
-    return dss
-
-
 
 def addMonitors(dss):
     for load in dss.Loads.AllNames():
@@ -61,7 +52,7 @@ def addMonitors(dss):
     
     return dss 
 
-def addLoadTimeSeries(dss,filename):
+def addLoadTimeSeries(dss, run_type, filename):
     #Read Time Series CSV file
     current_directory = os.path.realpath(os.path.dirname(__file__))
     load_file = os.path.join(current_directory,'../data/time_series/{0}'.format(filename))
@@ -77,8 +68,8 @@ def addLoadTimeSeries(dss,filename):
     dss.LoadShape.PMult(results)
     
     #assign the load shape to all loads
-    for l in Iterator(dss.Loads,'Yearly'):
-        if (l()=="fixed"):
+    for l in Iterator(dss.Loads,run_type):
+        if (l()==run_type):
             continue
         l('load')
     
@@ -100,7 +91,7 @@ def addSolarTimeSeries(dss,filename):
     
     return dss    
 
-def addPVSystem(dss, bus, inverter, capacity, irradiance, timeseries):
+def addPVSystem(dss, bus, inverter, capacity, irradiance, run_type, timeseries):
     #add the solar irradiance curve
     addSolarTimeSeries(dss,timeseries)
     #basic parameter curves
@@ -109,11 +100,12 @@ def addPVSystem(dss, bus, inverter, capacity, irradiance, timeseries):
     dss.run_command("new XYCurve.vvarcurve Npts=4 Xarray=[0.5 0.95 1.05 1.5] Yarray=[1.0 1.0 -1.0 -1.0]")
     dss.run_command("new XYCurve.vwattcurve Npts=4 Xarray=[0.5 1 1.1 2] Yarray=[1.0 1.0 0 0]")
     dss.run_command(
-    'New PVsystem.{0} Bus1={0} kVA={1} Pmpp={2} irradiance={3} phases=3 %Cutout = 0.0, %Cutin = 0.0, kv=24 Tyear=PVtemp P-Tcurve=PVPT effcurve=PVeff temperature=25 yearly=PV'.format(
+    'New PVsystem.{0} Bus1={0} kVA={1} Pmpp={2} irradiance={3} phases=3 %Cutout = 0.0, %Cutin = 0.0, kv=24 Tyear=PVtemp P-Tcurve=PVPT effcurve=PVeff temperature=25 {4}=PV'.format(
         bus,
         inverter,
         capacity,
-        irradiance))
+        irradiance,
+        run_type))
 
     for pvsystem in dss.PVsystems.AllNames():
         dss_command_v = 'New monitor.PVsystem_voltage element=PVsystem.{0} term=1 mode=32'.format(pvsystem)
@@ -126,7 +118,7 @@ def addPVSystem(dss, bus, inverter, capacity, irradiance, timeseries):
 def addStorageTimeSeries(dss,filename):
     #Read Time Series CSV file
     current_directory = os.path.realpath(os.path.dirname(__file__))
-    load_file = os.path.join(current_directory,'../data/time_series/BSS_shape_yearly.csv')
+    load_file = os.path.join(current_directory,'../data/time_series/{0}'.format(filename))
     results = []
     with open(load_file) as csvfile:
         results = [float(s) for line in csvfile.readlines() for s in line[:-1].split(',')]
@@ -140,14 +132,15 @@ def addStorageTimeSeries(dss,filename):
     
     return dss  
 
-def addBSSystem(dss, bus, power, energy, timeseries):
+def addBSSystem(dss, bus, power, energy, run_type, timeseries):
     #add follow curve
     addStorageTimeSeries(dss, timeseries)
     #basic parameter curves
-    dss.run_command('New Storage.Battery phases=3 Bus1={0} kV=24 kWrated={1} kWhrated={2} %reserve=10 kWhstored=382.233 dispmode=follow yearly=BSS'.format(
+    dss.run_command('New Storage.Battery phases=3 Bus1={0} kV=24 kWrated={1} kWhrated={2} %reserve=10 kWhstored=382.233 dispmode=follow {3}=BSS'.format(
         bus,
         power,
-        energy))
+        energy,
+        run_type))
     
     dss_command_v = 'New monitor.BSS_voltage element=Storage.Battery term=1 mode=32'
     dss.run_command(dss_command_v)
